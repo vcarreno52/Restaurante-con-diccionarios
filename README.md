@@ -60,6 +60,9 @@ Para modelar los diferentes tipos de menús (Vegetariano, Para compartir, Infant
 
 Además de estas tablas específicas de menú, se ha diseñado una tabla central llamada menuitem. Esta tabla actúa como una clase padre y almacena información general sobre todos los platos, independientemente del tipo de menú al que pertenezcan. De esta manera, se evita la redundancia de datos y se facilita la gestión y actualización de la información común a todos los platos.
 
+#Resultados
+
+El código genera diccionarios para facilitar la gestión de información de menús y platos. Este formato simplifica el procesamiento y la transferencia de datos entre módulos. Luego, los diccionarios se cargan a MySQL, asegurando la persistencia y el acceso centralizado a la información. La estructura de tablas optimiza el almacenamiento y la consulta de datos. En resumen, el código ofrece una solución eficiente, flexible y escalable para la gestión de menús y platos.
 
 
 
