@@ -36,8 +36,14 @@ class MaperoAlcoholico(Mapeo):
         self.dicmenu ["Alcolhol"] = alcolhol
         self.dicmenu ["tipo"]= tipo 
 
+class MaperoVegetariano(Mapeo):
+    def __init__(self, nombre, precio, cantidad, verduras):
+        super()._init_(nombre, precio, cantidad)
+        self.dicmenu ["verduras"] = verduras
 
-    
-A= MapeoInfantil("Juan", 2000, 1, "Dinosario")
-print(A.obtener_diccionario())
+class MaperoParaCompartir(Mapeo):
+    def __init__(self, nombre, precio, cantidad, platillo):
+        super()._init_(nombre, precio, cantidad)
+        self.dicmenu ["platillo"] = platillo
+
 
