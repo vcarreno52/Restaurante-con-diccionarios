@@ -55,3 +55,11 @@ Ejemplo de conexión:
                     conexion.commit()
 
 📂 Esquema de la Base de Datos
+
+Para modelar los diferentes tipos de menús (Vegetariano, Para compartir, Infantil, etc.), se ha creado una tabla independiente para cada uno de ellos. Cada tabla contiene información específica sobre los platos incluidos en ese menú en particular, como su nombre, descripción, precio y otros detalles relevantes.
+
+Además de estas tablas específicas de menú, se ha diseñado una tabla central llamada menuitem. Esta tabla actúa como una clase padre y almacena información general sobre todos los platos, independientemente del tipo de menú al que pertenezcan. De esta manera, se evita la redundancia de datos y se facilita la gestión y actualización de la información común a todos los platos.
+
+
+
+
