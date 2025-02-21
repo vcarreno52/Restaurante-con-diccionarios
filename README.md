@@ -18,10 +18,9 @@ El módulo Mapeo actúa como un puente entre las instancias de las clases defini
 
 Ejemplo de uso:
 
-from Mapeo import MapeoInfantil
-
-A = MapeoInfantil("Juan", 2000, 1, "Dinosaurio")
-print(A.obtener_diccionario())
+                from Mapeo import MapeoInfantil
+                A = MapeoInfantil("Juan", 2000, 1, "Dinosaurio")
+                print(A.obtener_diccionario())
 
 3️⃣ Conexión con MySQL (Conexion.py)
 
@@ -29,30 +28,30 @@ El módulo Conexion se encarga de la persistencia de los datos. Su labor consist
 
 Ejemplo de conexión:
 
-import mysql.connector
-
-conexion = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="123456789",
-    database="menu"
-)
-cursor = conexion.cursor()
-
-Ejemplo de inserción de datos:
-
-def subirinfantil(data):
-    nombre = data["nombre"]
-    precio = data["precio"]
-    cantidad = data["cantidad"]
-    figurita = data["figurita"]
-
-    cursor.execute("INSERT INTO MenuItem (nombre, precio, cantidad) VALUES (%s, %s, %s)",
-                   (nombre, precio, cantidad))
-    menu_id = cursor.lastrowid  
-
-    cursor.execute("INSERT INTO menu_infantil (menu_id, figurita) VALUES (%s, %s)",
-                   (menu_id, figurita))
-    conexion.commit()
+                import mysql.connector
+                
+                conexion = mysql.connector.connect(
+                    host="localhost",
+                    user="root",
+                    password="123456789",
+                    database="menu"
+                )
+                cursor = conexion.cursor()
+                
+                Ejemplo de inserción de datos:
+                
+                def subirinfantil(data):
+                    nombre = data["nombre"]
+                    precio = data["precio"]
+                    cantidad = data["cantidad"]
+                    figurita = data["figurita"]
+                
+                    cursor.execute("INSERT INTO MenuItem (nombre, precio, cantidad) VALUES (%s, %s, %s)",
+                                   (nombre, precio, cantidad))
+                    menu_id = cursor.lastrowid  
+                
+                    cursor.execute("INSERT INTO menu_infantil (menu_id, figurita) VALUES (%s, %s)",
+                                   (menu_id, figurita))
+                    conexion.commit()
 
 📂 Esquema de la Base de Datos
